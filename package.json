@@ -1,0 +1,19 @@
+{
+  "name": "expressjs-crash-course",
+  "version": "1.0.0",
+  "description": "Express-crash-course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Express-crash-course"
+  },
+  "author": "Faateh029",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
