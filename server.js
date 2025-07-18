@@ -1,5 +1,6 @@
 import express from 'express'
 import path from'path';
+import errorHandler from './Middleware/error.js';
 import posts from './Routes/posts.js'
 import logger from './Middleware/logger.js';
 const port=process.env.PORT||5000
@@ -9,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(logger);
 app.use('/api/posts' , posts);
+app.use(errorHandler);
 app.listen(port , ()=>{console.log('server listening on port 5000')});
 
 

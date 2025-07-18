@@ -10,7 +10,7 @@ let posts = [
                 {id:4, title:'fatih4'},
  ]
 
- router.get('/' , (req,res)=>{
+ router.get('/' , (req,res,next)=>{
     const limit = parseInt(req.query.limit);
     if(!isNaN(limit)&& limit>0){
         return res.status(200).json(posts.slice(0,limit));
@@ -18,19 +18,23 @@ let posts = [
  res.json(posts);
  })
 
- router.get('/:id',(req,res)=>{
+ router.get('/:id',(req,res , next)=>{
     const id = parseInt(req.params.id);
     const post = posts.find((post)=>post.id===id);
     if(!post){
-       return res.status(404).json({message:`A post with id:${id} was not found`})
+        const err= new Error(`A post with id ${id} was not found`);
+        err.status=404;
+       return next(err);
     }
         res.status(200).json(post);
  })
 
 
-router.post('/', (req, res) => {
+router.post('/', (req, res , next) => {
     if (!req.body || !req.body.title) {
-        return res.status(400).json({ msg: "please enter a title" });
+      const err= new Error(`Please enter a title`);
+      err.status=400;
+       return next(err);
     }
     const newPost = {
         id: posts.length + 1,
@@ -41,25 +45,27 @@ router.post('/', (req, res) => {
     res.status(200).json(posts);
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', (req, res, next) => {
     const id =  parseInt(req.params.id);
     const post= posts.find((post)=>post.id===id);
-    if(!post){
-       return res
-        .status(400)
-        .json({msg:"Id not found"})
+    if(!post){ 
+
+      const err= new Error(`A post with id ${id} was not found`);
+      err.status=404;
+       return next(err);
     }
     post.title=req.body.title;
     res.status(200).json(posts);
 })
 
-router.delete('/:id', (req,res)=>{
+router.delete('/:id', (req,res, next)=>{
     const id = parseInt(req.params.id);
     const post= posts.find(post=>post.id===id);
     if(!post){
-        return res
-        .status(400)
-        .json({msg:"enter a valid id"})
+
+        const err= new Error(`A post with id ${id} was not found`);
+        err.status=404;
+       return next(err);
     }
     posts=posts.filter(post=>post.id!==id);
     res
