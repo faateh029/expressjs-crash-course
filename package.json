@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Express-crash-course",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --watch server"
@@ -15,6 +15,7 @@
   "author": "Faateh029",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^5.1.0"
   }
 }

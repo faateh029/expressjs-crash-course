@@ -1,3 +1,4 @@
+import colors from 'colors';
 import fs from 'fs/promises'
 
 const logger = async (req,res,next)=>{
@@ -18,6 +19,15 @@ const logger = async (req,res,next)=>{
     }
        
   );
+
+  const methodColor = {
+    GET:'green',
+    POST:'blue',
+    PUT:'yellow',
+    DELETE:'red'
+  }
+  const color = methodColor[req.method]||white;
+  console.log(`http://localhost/${process.env.PORT}:${req.method}/${req.url}  `[color]);
  next();
 }
   

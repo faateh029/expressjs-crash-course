@@ -37,3 +37,10 @@
 {"method":"GET","url":"/api/test","time":"7/18/2025, 9:12:48 PM"}
 {"method":"GET","url":"/api/test","time":"7/18/2025, 9:13:09 PM"}
 {"method":"GET","url":"/api/test","time":"7/18/2025, 9:14:07 PM"}
+{"method":"GET","url":"/api/posts","time":"7/18/2025, 9:27:41 PM"}
+{"method":"POST","url":"/api/posts","time":"7/18/2025, 9:28:02 PM"}
+{"method":"POST","url":"/api/posts","time":"7/18/2025, 9:28:10 PM"}
+{"method":"PUT","url":"/api/posts/4","time":"7/18/2025, 9:28:50 PM"}
+{"method":"DELETE","url":"/api/posts/5","time":"7/18/2025, 9:28:56 PM"}
+{"method":"GET","url":"/api/posts/5","time":"7/18/2025, 9:29:04 PM"}
+{"method":"GET","url":"/api/posts","time":"7/18/2025, 9:29:16 PM"}
