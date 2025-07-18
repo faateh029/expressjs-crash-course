@@ -40,6 +40,18 @@ router.post('/', (req, res) => {
     posts.push(newPost);
     res.status(200).json(posts);
 });
+
+router.put('/:id', (req, res) => {
+    const id =  parseInt(req.params.id);
+    const post= posts.find((post)=>post.id===id);
+    if(!post){
+       return res
+        .status(400)
+        .json({msg:"Id not found"})
+    }
+    post.title=req.body.title;
+    res.status(200).json(posts);
+})
 //  router.post('/', (req, res) => {
 
 //     // console.log('DEBUG req.body:', req.body); // Add this line
