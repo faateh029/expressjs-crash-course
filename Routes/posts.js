@@ -1,4 +1,6 @@
 import express from 'express';
+import fs from 'fs'
+
 const router = express.Router();
 
 let posts = [
@@ -27,8 +29,6 @@ let posts = [
 
 
 router.post('/', (req, res) => {
-        console.log('DEBUG req.headers:', req.headers); // Log headers
-    console.log('DEBUG req.body:', req.body); // Log body
     if (!req.body || !req.body.title) {
         return res.status(400).json({ msg: "please enter a title" });
     }
@@ -60,7 +60,6 @@ router.delete('/:id', (req,res)=>{
         return res
         .status(400)
         .json({msg:"enter a valid id"})
-        
     }
     posts=posts.filter(post=>post.id!==id);
     res
