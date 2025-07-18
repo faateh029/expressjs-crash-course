@@ -33,3 +33,7 @@
 {"method":"POST","url":"/api/posts/?title=fatih6","time":"7/18/2025, 1:00:39 PM"}
 {"method":"POST","url":"/api/posts/","time":"7/18/2025, 1:01:21 PM"}
 {"method":"DELETE","url":"/api/posts/45","time":"7/18/2025, 1:01:36 PM"}
+{"method":"GET","url":"/api/test","time":"7/18/2025, 9:11:59 PM"}
+{"method":"GET","url":"/api/test","time":"7/18/2025, 9:12:48 PM"}
+{"method":"GET","url":"/api/test","time":"7/18/2025, 9:13:09 PM"}
+{"method":"GET","url":"/api/test","time":"7/18/2025, 9:14:07 PM"}
