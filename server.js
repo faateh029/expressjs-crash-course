@@ -1,4 +1,6 @@
 import express from 'express'
+import dotenv from 'dotenv';
+dotenv.config();
 import path from'path';
 import notFound from './Middleware/notFound.js';
 import errorHandler from './Middleware/error.js';

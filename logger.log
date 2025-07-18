@@ -44,3 +44,16 @@
 {"method":"DELETE","url":"/api/posts/5","time":"7/18/2025, 9:28:56 PM"}
 {"method":"GET","url":"/api/posts/5","time":"7/18/2025, 9:29:04 PM"}
 {"method":"GET","url":"/api/posts","time":"7/18/2025, 9:29:16 PM"}
+{"method":"GET","url":"/api/posts","time":"7/18/2025, 9:55:38 PM"}
+{"method":"GET","url":"/api/posts/2","time":"7/18/2025, 9:55:43 PM"}
+{"method":"POST","url":"/api/posts/","time":"7/18/2025, 9:56:00 PM"}
+{"method":"PUT","url":"/api/posts/5","time":"7/18/2025, 9:56:17 PM"}
+{"method":"PUT","url":"/api/posts/5","time":"7/18/2025, 9:56:24 PM"}
+{"method":"PUT","url":"/api/posts/4","time":"7/18/2025, 9:56:34 PM"}
+{"method":"PUT","url":"/api/posts/4","time":"7/18/2025, 9:56:50 PM"}
+{"method":"DELETE","url":"/api/posts/5","time":"7/18/2025, 9:57:03 PM"}
+{"method":"DELETE","url":"/api/posts/5","time":"7/18/2025, 9:57:42 PM"}
+{"method":"GET","url":"/api/posts/5","time":"7/18/2025, 9:58:06 PM"}
+{"method":"GET","url":"/api/posts/4","time":"7/18/2025, 9:58:12 PM"}
+{"method":"GET","url":"/api/posts/4","time":"7/18/2025, 10:00:23 PM"}
+{"method":"GET","url":"/api/posts/4","time":"7/18/2025, 10:00:25 PM"}
