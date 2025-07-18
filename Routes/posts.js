@@ -1,4 +1,4 @@
-const express= require('express');
+import express from 'express';
 const router = express.Router();
 
 let posts = [
@@ -14,8 +14,6 @@ let posts = [
         return res.status(200).json(posts.slice(0,limit));
     }
  res.json(posts);
-    
-   
  })
 
  router.get('/:id',(req,res)=>{
@@ -27,4 +25,32 @@ let posts = [
         res.status(200).json(post);
  })
 
- module.exports =router ; 
+
+router.post('/', (req, res) => {
+        console.log('DEBUG req.headers:', req.headers); // Log headers
+    console.log('DEBUG req.body:', req.body); // Log body
+    if (!req.body || !req.body.title) {
+        return res.status(400).json({ msg: "please enter a title" });
+    }
+    const newPost = {
+        id: posts.length + 1,
+        title: req.body.title 
+    }
+    
+    posts.push(newPost);
+    res.status(200).json(posts);
+});
+//  router.post('/', (req, res) => {
+
+//     // console.log('DEBUG req.body:', req.body); // Add this line
+//     // const newPost = {
+//     //     id: posts.length + 1,
+//     //     title: req.body.title 
+//     // }
+//     // if (!newPost.title) {
+//     //     return res.status(400).json({ msg: "please enter a title" })
+//     // }
+//     // posts.push(newPost);
+//     // res.status(200).json(posts);
+// })
+export default router;
